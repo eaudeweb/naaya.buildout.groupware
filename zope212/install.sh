@@ -12,6 +12,7 @@ ln -s src/buildout/versions.cfg
 ln -s src/buildout/zope-2.12.26-versions.cfg
 ln -s src/buildout/naaya.cfg
 ln -s src/buildout/bootstrap.py
+ln -s src/buildout/sources.cfg
 cp src/buildout/secret.cfg.sample secret.cfg
 
 wget http://eggshop.eaudeweb.ro/Python-2.6.8-edw.tgz
