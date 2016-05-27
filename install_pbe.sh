@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mkdir src
-git clone https://github.com/eaudeweb/naaya.buildout.groupware.git src/buildout
+git clone -b flis_dev https://github.com/eaudeweb/naaya.buildout.groupware.git src/buildout
 git clone https://github.com/eaudeweb/naaya.bundles.NaayaBundles-PBE.git src/NaayaBundles-PBE
 git clone https://github.com/eaudeweb/naaya.bundles.NaayaBundles-Forum.git src/NaayaBundles-Forum
 git clone https://github.com/eaudeweb/naaya.fake_envirowindows.git src/naaya.fake_envirowindows
