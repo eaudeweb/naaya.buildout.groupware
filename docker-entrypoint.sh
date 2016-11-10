@@ -8,6 +8,7 @@ START="start restart"
 mkdir -p /var/local/groupware/var/naaya-mail-queue/new
 mkdir -p /var/local/groupware/var/naaya-mail-queue/cur
 mkdir -p /var/local/groupware/var/naaya-mail-queue/tmp
+chown 500:500 -R /var/local/groupware/var/naaya-mail-queue
 
 if [ ! -z "$CRONTAB" ]; then
   crontab -u zope crontab.cfg
