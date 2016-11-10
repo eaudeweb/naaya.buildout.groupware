@@ -4,6 +4,11 @@ set -e
 COMMANDS="debug help logtail show stop adduser fg kill quit run wait console foreground logreopen reload shell status"
 START="start restart"
 
+#create the Maildir folder structure
+mkdir -p /var/local/groupware/var/naaya-mail-queue/new
+mkdir -p /var/local/groupware/var/naaya-mail-queue/cur
+mkdir -p /var/local/groupware/var/naaya-mail-queue/tmp
+
 if [ ! -z "$CRONTAB" ]; then
   crontab -u zope crontab.cfg
   crond
