@@ -5,6 +5,7 @@ WORKDIR $ZOPE_HOME
 
 COPY buildout.cfg $ZOPE_HOME/
 COPY crontab.cfg $ZOPE_HOME/
+COPY sources.cfg $ZOPE_HOME/
 
 RUN /var/local/python/python26/bin/python ./bootstrap.py --version=1.4.4 \
  && bin/buildout \
