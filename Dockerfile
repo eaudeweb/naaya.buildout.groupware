@@ -1,10 +1,15 @@
-from eaudeweb/naayaos
+from eaudeweb/naayaos:16.11.18
 
 ENV ZOPE_HOME /var/local/groupware
+WORKDIR $ZOPE_HOME
 
 COPY bootstrap.py $ZOPE_HOME/
+COPY buildout.cfg $ZOPE_HOME/
 COPY naaya.cfg $ZOPE_HOME/
 COPY sources.cfg $ZOPE_HOME/
 COPY versions.cfg $ZOPE_HOME/
 COPY zope-2.12.28-versions.cfg $ZOPE_HOME/
 COPY docker-entrypoint.sh /
+
+RUN /var/local/python/python26/bin/python ./bootstrap.py --version=1.4.4 \
+ && bin/buildout
