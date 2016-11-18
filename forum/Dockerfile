@@ -7,7 +7,8 @@ COPY buildout.cfg $ZOPE_HOME/
 COPY crontab.cfg $ZOPE_HOME/
 COPY newrelic.ini $ZOPE_HOME/
 
-RUN /var/local/python/python26/bin/python ./bootstrap.py --version=1.4.4 \
+RUN wget https://raw.githubusercontent.com/eaudeweb/naaya.buildout.groupware/master/versions.cfg \
+ && /var/local/python/python26/bin/python ./bootstrap.py --version=1.4.4 \
  && bin/buildout \
  && mkdir -p $ZOPE_HOME/var/log \
  && touch $ZOPE_HOME/var/log/instance.log \
