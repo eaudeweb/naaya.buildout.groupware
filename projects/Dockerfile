@@ -1,4 +1,4 @@
-from eeacms/groupware:groupware-17.10.04-py27
+from eeacms/groupware:groupware-17.10.05-py27
 
 ENV ZOPE_HOME /var/local/groupware
 WORKDIR $ZOPE_HOME
