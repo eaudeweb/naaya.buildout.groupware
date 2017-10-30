@@ -1,4 +1,4 @@
-from eaudeweb/naayaos:17.10.27-py27
+from eaudeweb/naayaos:17.10.30-py27
 
 ENV ZOPE_HOME /var/local/groupware
 WORKDIR $ZOPE_HOME
