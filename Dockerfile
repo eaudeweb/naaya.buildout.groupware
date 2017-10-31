@@ -14,5 +14,5 @@ COPY docker-entrypoint.sh /
 RUN wget https://bootstrap.pypa.io/get-pip.py \
  && python2.7 ./get-pip.py setuptools==7.0 \
  && rm -r ./get-pip.py \
-RUN python2.7 ./bootstrap.py --version=1.4.4 \
+ && python2.7 ./bootstrap.py --version=1.4.4 \
  && bin/buildout
