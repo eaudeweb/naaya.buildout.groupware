@@ -28,6 +28,7 @@ if [[ $START == *"$1"* ]]; then
   trap _stop SIGTERM SIGINT
 
   if [ ! -z "$DEBUG_MODE" ]; then
+    git -C src/naaya/ pull
     bin/develop up
   fi
 

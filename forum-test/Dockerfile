@@ -1,4 +1,4 @@
-from eeacms/groupware:groupware-17.11.02
+from eeacms/groupware:groupware-17.11.03
 
 ENV ZOPE_HOME /var/local/groupware
 WORKDIR $ZOPE_HOME
@@ -6,9 +6,9 @@ WORKDIR $ZOPE_HOME
 COPY buildout.cfg $ZOPE_HOME/
 COPY crontab.cfg $ZOPE_HOME/
 COPY sources.cfg $ZOPE_HOME/
+COPY versions.cfg $ZOPE_HOME/
 
 RUN mkdir -p src && cd src && git clone https://github.com/eaudeweb/naaya.git && cd .. \
- && curl https://raw.githubusercontent.com/eaudeweb/naaya.buildout.groupware/master/versions.cfg > versions.cfg \
  && python2.7 ./bootstrap.py --version=1.4.4 \
  && bin/buildout \
  && mkdir -p $ZOPE_HOME/var/log \
