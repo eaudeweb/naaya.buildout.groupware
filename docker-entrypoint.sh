@@ -29,7 +29,7 @@ if [[ $START == *"$1"* ]]; then
 
   if [ ! -z "$DEBUG_MODE" ]; then
     bin/develop up
-    git --git-dir=src/naaya/ pull
+    git --git-dir=src/naaya/.git pull
   fi
 
   bin/instance start
