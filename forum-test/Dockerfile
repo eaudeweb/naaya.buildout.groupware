@@ -9,7 +9,6 @@ COPY sources.cfg $ZOPE_HOME/
 COPY versions.cfg $ZOPE_HOME/
 
 RUN mkdir -p src && cd src && git clone https://github.com/eaudeweb/naaya.git && cd .. \
- && python2.7 ./bootstrap.py --version=1.4.4 \
  && bin/buildout \
  && mkdir -p $ZOPE_HOME/var/log \
  && touch $ZOPE_HOME/var/log/instance.log \
