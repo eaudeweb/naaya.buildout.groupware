@@ -24,7 +24,6 @@ if [[ $START == *"$1"* ]]; then
     kill -TERM $child 2>/dev/null
   }
 
-  /usr/sbin/crond
   trap _stop SIGTERM SIGINT
 
   if [ ! -z "$DEBUG_MODE" ]; then
