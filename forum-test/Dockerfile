@@ -8,7 +8,7 @@ COPY crontab.cfg $ZOPE_HOME/
 COPY sources.cfg $ZOPE_HOME/
 COPY versions.cfg $ZOPE_HOME/
 
-RUN mkdir -p src && cd src && git clone https://github.com/eaudeweb/naaya.git && cd .. \
+RUN mkdir -p src && cd src && git clone -b zope213 https://github.com/eaudeweb/naaya.git && cd .. \
  && bin/buildout \
  && mkdir -p $ZOPE_HOME/var/log \
  && touch $ZOPE_HOME/var/log/instance.log \
