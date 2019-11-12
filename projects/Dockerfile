@@ -6,7 +6,7 @@ WORKDIR $ZOPE_HOME
 COPY buildout.cfg $ZOPE_HOME/
 COPY crontab.cfg $ZOPE_HOME/
 
-RUN curl https://raw.githubusercontent.com/eaudeweb/naaya.buildout.groupware/master/versions.cfg > versions.cfg \
+RUN curl https://raw.githubusercontent.com/eaudeweb/naaya.buildout.groupware/zope213/versions.cfg > versions.cfg \
  && bin/buildout \
  && mkdir -p $ZOPE_HOME/var/log \
  && touch $ZOPE_HOME/var/log/instance.log \
