@@ -15,7 +15,7 @@ chown 500:500 /var/local/groupware/var/naaya-mail-queue/tmp
 
 if [ ! -z "$CRONTAB" ]; then
   crontab -u zope crontab.cfg
-  crond
+  service cron start
   exec cat
 else
   if [[ $START == *"$1"* ]]; then

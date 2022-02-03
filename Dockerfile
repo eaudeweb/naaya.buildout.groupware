@@ -1,4 +1,4 @@
-FROM eaudeweb/naayaos:20211105-py27-slim
+FROM eaudeweb/naayaos:20220203-py27-slim
 
 ENV ZOPE_HOME /var/local/groupware
 WORKDIR $ZOPE_HOME
