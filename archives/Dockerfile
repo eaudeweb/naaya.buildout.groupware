@@ -1,4 +1,4 @@
-FROM eeacms/groupware:groupware-22.02.04
+FROM eeacms/groupware:groupware-22.02.05
 
 ENV ZOPE_HOME /var/local/groupware
 WORKDIR $ZOPE_HOME
